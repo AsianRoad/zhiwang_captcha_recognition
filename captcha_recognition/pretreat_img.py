@@ -90,6 +90,6 @@ def clear_noise(image,N):
 
 if __name__ == '__main__':
      for i in range(10):
-        image = Image.open('D:\\zhiwang_captcha\\img\\raw\\%d.gif' %i)
+        image = Image.open('../img/raw/%d.gif' %i)
         image = pretreat_image(image)
         image.show()

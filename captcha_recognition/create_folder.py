@@ -10,14 +10,14 @@ def new_char_folder():
     # 0-9
     for k in range(48, 58):
         try:
-            os.mkdir('D:\\zhiwang_captcha\\img/%c' % k)
+            os.mkdir('../img/%c' % k)
         except:
             pass
 
     # A-Z
     for k in range(65, 91):
         try:
-            os.mkdir('D:\\zhiwang_captcha\\img/%c' % k)
+            os.mkdir('../img/%c' % k)
         except:
             pass
 
@@ -27,13 +27,13 @@ def new_char_folder():
 def new_char_example():
     new_char_folder()
     for s in range(300):
-        image = Image.open('D:\\zhiwang_captcha\\img\\raw\\%d.gif' % s)
+        image = Image.open('../img/raw/%d.gif' % s)
         image = pretreat_image(image)
 
-        image.save('D:\\zhiwang_captcha\\img\\%d.png' % s)
+        image.save('../img/%d.png' % s)
         image_char_list = cut_all_char(image)
         for k in range(5):
-            image_char_list[k].save('D:\\zhiwang_captcha\\img\\%d_%d.png' % (s, k))
+            image_char_list[k].save('../img/%d_%d.png' % (s, k))
 
 
 if __name__ == '__main__':

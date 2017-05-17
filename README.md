@@ -1,0 +1,2 @@
+# zhiwang_captcha_recognition
+识别中国知网的验证码
